@@ -2,7 +2,7 @@ var fs = require('fs');
 
 var editor = function(){
     this.lines = {};
-    this.tempcontent = {content: 'asdtemp'};
+    this.tempcontent = {content: ''};
     this.currentLine = 0;
 
     this.saveLine = function(Line){
@@ -27,9 +27,7 @@ var editor = function(){
                 break;
             case '-':
                 this.currentLine -= 1;
-                
                 break;
-        
             default:
                 break;
         }
@@ -46,6 +44,8 @@ var editor = function(){
     };
 };
 
+
+/* Common Library Functions */
 function myrequire(){
         var currentFile = location.pathname.substring(location.pathname.lastIndexOf("/") + 1).split('.',1);
         var jsFile = './'+currentFile+'.js';
@@ -57,7 +57,11 @@ function myrequire(){
         console.log(jsFile+' does not exist! This can usually be ignored.')
     }
 };
-//*
+
+/* Initialization - May shift this to corresonding jsFile */
+var edit = new editor();
+
+/* Testdata
 var edit = new editor();
 edit.lines[0]={content:'asd0'};
 edit.lines[1]={content:'asd1'};
@@ -65,10 +69,10 @@ edit.lines[4]={content:'asd4'};
 edit.lines[5]={content:'asd5'};
 edit.saveLine(9);
 //*/
-//*
+
+/* Testdata
 console.log(typeof(edit.lines));
 console.log(typeof(edit.saveLine));
 console.log(edit.lines);
 console.log(edit.lines[0].content);
-
 //*/
