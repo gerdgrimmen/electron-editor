@@ -1,0 +1,14 @@
+{
+    "name" : "electron-editor",
+    "version" : "0.1.0",
+    "description": "Just a very simple editor for code",
+    "scripts": {
+        "start" : "electron main.js"   
+    },
+    "author": {
+        "name": "Gerd Grimmen",
+        "email": "gerd.grimmen.gg@gmail.com"
+    }
+    
+
+}

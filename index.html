@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Simple Electron Editor</title>
+        <script type="text/javascript" src="./lib.js"></script>
+    </head>
+    <body>
+        <h1>Simple Electron Editor</h1>
+        <label for="input">Input: </label>
+        <input name="input" type="text" id="input" />
+        <div id="currentLine" style="background:cyan;min-height:20px;min-width:10px;"></div>
+        <br><label for="code">Code: </label>
+        <textarea name="code" id="code" cols="45" rows="10"></textarea>
+
+        <div id="button_area_left">
+            <h2>button_area_left</h2>
+        </div>
+        <div id="button_area_right">
+            <h2>button_area_right</h2>
+        </div>
+        <script>myrequire();</script>
+    </body>
+</html>
