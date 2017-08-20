@@ -11,11 +11,12 @@ var editor = function(){
     };
 
     this.writeLinesToCode = function(){
+        //  document.getElementById('code').value = '';
         var stringToWrite = ''; 
         for (key in this.lines){
-            stringToWrite += edit.lines[key].content + '\n';
+            stringToWrite += this.lines[key].content + '\n';
         };
-        document.getElementById('code').innerHTML = stringToWrite;
+        document.getElementById('code').value = stringToWrite;
         this.createTempContent();
         this.saveLine(this.currentLine);
     };
@@ -58,21 +59,3 @@ function myrequire(){
     }
 };
 
-/* Initialization - May shift this to corresonding jsFile */
-var edit = new editor();
-
-/* Testdata
-var edit = new editor();
-edit.lines[0]={content:'asd0'};
-edit.lines[1]={content:'asd1'};
-edit.lines[4]={content:'asd4'};
-edit.lines[5]={content:'asd5'};
-edit.saveLine(9);
-//*/
-
-/* Testdata
-console.log(typeof(edit.lines));
-console.log(typeof(edit.saveLine));
-console.log(edit.lines);
-console.log(edit.lines[0].content);
-//*/
